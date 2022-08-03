@@ -1,4 +1,4 @@
-// making the Title similar 
+// toggle the title 
 let title_chang=2;
 setInterval(() => {
     title_chang++;
@@ -17,6 +17,19 @@ $(".bar").click(function(){
 $(".navigation_list").toggle();
 });
 
+//toggle the password
+$(".toggle-password").click(function() {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } 
+    else {
+      input.attr("type", "password");
+    }
+  });
+
 var lottie_post= lottie.loadAnimation({
     container: document.getElementById("lottie_container"), // container for the lotties
     renderer: "svg",
@@ -24,6 +37,7 @@ var lottie_post= lottie.loadAnimation({
     autoplay: true,
     loop: true,
   });
+
 
   $(".slider").slick({
     dots: false,
@@ -60,4 +74,39 @@ var lottie_post= lottie.loadAnimation({
         }
     },
       ]
+});
+$(".slider_2").slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: true,
+  cssEase: "ease-in-out",
+
+  responsive: [{
+      breakpoint: 1025,
+      settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+      }
+  },
+
+ {
+      breakpoint: 768,
+      settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+      }
+  },
+  {
+      breakpoint: 400,
+      settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+      }
+  },
+    ]
 });
