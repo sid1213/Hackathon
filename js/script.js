@@ -24,3 +24,40 @@ var lottie_post= lottie.loadAnimation({
     autoplay: true,
     loop: true,
   });
+
+  $(".slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: true,
+    cssEase: "ease-in-out",
+    prevArrow: $('.our_mentors .next'),
+    nextArrow: $('.our_mentors .prev'),
+    responsive: [{
+        breakpoint: 1025,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+        }
+    },
+
+   {
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    },
+    {
+        breakpoint: 400,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    },
+      ]
+});

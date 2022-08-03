@@ -1,7 +1,7 @@
 :root{
     --theam_blue:#B8C1EC !important;
     --dark_blue:#232946 ;
-    --bg_blue:#B8C1EC66 !important;
+    --bg_blue:#fafafd !important;
 }
 *{
     margin: 0;
@@ -9,20 +9,38 @@
     box-sizing: border-box;
     text-align: center;
 }
+
 h1{
     font-weight: 700;
     font-size: 3rem;
 }
+h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.p_bold{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgba(14, 23, 44, 0.8);
+}
+.p_big{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
 
+.und{
 
+    border-bottom: 3px solid #b97732;
+}
 
 .main section{
     width: 100%;
     margin: 0;
 }
-.main section:nth-child(2){
-    position: sticky     ;
+.main .navigations_main{
+    position: sticky ;
     top: 0;
+    z-index: 33333;
 }
 .notification{
     width: 100%;
@@ -172,6 +190,7 @@ text-align: center  ;
 }
 
 .btn{
+    width: fit-content;
     background:var(--theam_blue);
     border: none;
     padding: 0.8rem 2rem;
@@ -180,9 +199,189 @@ text-align: center  ;
 }
 .btn:hover{
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
-    color: blue;
+    color:var(--bg_blue);
+    background: var(--dark_blue);
 }
 
+
+
+/* **************************abt__us*************** */
+.about_courses{
+    width: 100%;
+    min-height: 90vh;
+    background:var(--bg_blue);
+}
+.about_courses .about_main{
+    height:100%;
+    gap: 3rem;
+}
+.about_courses .about_main .img_box{
+    width: 40%;
+    box-shadow: -1rem 1rem 0px var(--theam_blue) ;
+}
+.numbers{
+    width: 100%;
+    gap: 0.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.numbers .num_box{
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    position: relative;
+    text-align: left;
+    margin: 0.5rem;
+}
+.numbers .num_box::before{
+    content: " ";
+    width:15%;
+    height:15%;
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+
+    border-top: 3px solid #b97732;
+    border-left: 3px solid #b97732;
+}
+.numbers .num_box::after{
+    content: " ";
+    width:15%;
+    height:15%;
+    position: absolute;
+    bottom: 0;
+    right: -0.5rem;
+    border-bottom: 3px solid #b97732;
+    border-right: 3px solid #b97732;
+}
+.numbers .num_box span{
+font-weight: bold;
+transform: scale(1);
+}
+/* **************************skills*************** */
+
+
+.skills_cnt .img-box{
+   width: 25%; 
+   position: relative;
+}
+/* **************************categories*************** */
+
+.ct_main{
+background:var(--bg_blue);
+}
+.catogeries{
+justify-content: space-between;
+}
+.catogeries .img_box_sub{ 
+width:30%;
+position: relative;
+top:0;
+margin: 1rem 0;
+}
+.catogeries .img_box_sub span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #737a9df1;
+    width: 100%;
+    padding: 0.5rem 0;
+    color: white;
+    font-weight: 500;
+    font-size:0.8em;
+}
+.explore_btn{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.46);
+    top: 0;
+}
+.img_box_sub:hover .explore_btn{
+    display: flex;
+}
+.explore_btn button:hover{
+    background:var(--theam_blue);
+    color: var(--dark_blue);
+}
+
+/* **************************Our-mentors*************** */
+.our_mentors .slider .img_box_ins{
+    width: 30%;
+    height: fit-content;
+    display: block;
+    position: relative;
+    margin: 0 1rem;
+}
+.our_mentors .slider .img_box_ins img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.our_mentors .slider .img_box_ins .abt_person{
+    position: absolute;
+    top: 0;
+    text-align: right;
+    background: #232946b6;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity ease-in 0.5s;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.our_mentors .slider .img_box_ins .abt_person p{
+font-size: 0.8em;
+}
+.our_mentors .slider .img_box_ins:hover .abt_person{
+    opacity:1 !important;
+}
+.our_mentors .slider .img_box_ins .abt_person .social_media{
+    width: 95%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.2rem;
+    overflow: hidden;
+}
+.our_mentors .slider .img_box_ins .abt_person .social_media a{
+width: 25%;
+font-size: 1.3rem; 
+padding:5px;
+color: var(--dark_blue);
+
+}
+.our_mentors .slider .img_box_ins .abt_person .social_media a:hover{
+    background:var(--theam_blue);
+}
+.our_mentors .slider .img_box_ins h5{
+margin-top: 1rem;
+}
+.our_mentors .slider .img_box_ins span{
+   color: #E45858;
+   font-weight: 400;
+}
+.control {
+        padding: 1rem;
+}
+.control button{
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    background:transparent;
+    padding: 0.5rem;
+    margin: 0 0.5rem ;
+    border-radius: 50%;
+    background:var(--theam_blue);
+
+}
+.control button:active{
+    box-shadow: -3px 3px 8px gray;
+}
 
  @media (max-width: 1200px) { 
 .navigations .navigation_list ul li{
@@ -235,18 +434,48 @@ margin: 0.5rem;
     .hide{
         right: 0.5rem;
     }
-   
+    .about_courses{
+        height: auto;
+    }
+    .about_courses .about_main .img_box{
+        width: 30%;
+    }
+    .p_big{
+        font-size: 1rem;
+    }
+    .numbers{
+        justify-content: space-between;
+        align-content: center;
+    }
+    .landing_banner_content{
+        order: 2;
+        background: white;
+    }
  }
- @media (max-width: 768px) { 
+ @media (max-width: 767px) { 
     /* .search{
         width: 100%;
     } */
-    .landing_banner_content{
-        order: 2;
+    .catogeries .img_box_sub{
+        width: 48%;
+    }
+
+    .about_courses .about_main .img_box{
+        width: 35%;
     }
  }
  @media (max-width: 576px) { 
     .search_p{
         width: 100%!important;
+    }
+    .about_courses .about_main .img_box{
+        width: 30%;
+        box-shadow: -0.5rem 0.5rem 0 var(--theam_blue);
+    }
+    .catogeries {
+        justify-content: center;
+    }
+    .catogeries .img_box_sub{
+        width: 60%;
     }
  }
