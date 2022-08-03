@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // toggle the title 
 let title_chang=2;
 setInterval(() => {
@@ -8,6 +14,13 @@ setInterval(() => {
     else
     document.title="Affordable & Competent Courses | iNeuron.ai";
 }, 500);
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $('.slider_2').slick('setPosition');
+    $('.slider').slick('setPosition');
+
+});
+
 AOS.init();
 
 $(".hide").click(function(){
@@ -30,7 +43,6 @@ $(".toggle-password").click(function() {
       input.attr("type", "password");
     }
   });
-
 var lottie_post= lottie.loadAnimation({
     container: document.getElementById("lottie_container"), // container for the lotties
     renderer: "svg",
@@ -38,8 +50,6 @@ var lottie_post= lottie.loadAnimation({
     autoplay: true,
     loop: true,
   });
-
-
   $(".slider").slick({
     dots: false,
     infinite: true,
