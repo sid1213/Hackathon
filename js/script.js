@@ -8,6 +8,7 @@ setInterval(() => {
     else
     document.title="Affordable & Competent Courses | iNeuron.ai";
 }, 500);
+AOS.init();
 
 $(".hide").click(function(){
 $(".notification").hide();
