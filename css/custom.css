@@ -1,4 +1,7 @@
 /***** user popup *****/
+.modal-body{
+    flex: inherit;
+}
 .modal-content{
     background:#FFFFFE;
     padding: 1.2rem 4rem; 
@@ -68,7 +71,7 @@
     margin: 0;
 }
 .modal-footer .btn{
-    width: 100%;
+    width: 95%;
     color: var(--dark_blue);
     background: transparent;
     border: 1px solid var(--dark_blue);
@@ -88,8 +91,25 @@
     width: 90%;
     text-align: justify;
 }
-
-/* ***** testimonials ***** */
+/****** silders *****/
+.achievers_slide,
+.inst_slider,
+.hackathon_slide{
+    padding-top: 6rem !important; 
+}
+.achievers_slide .slides img,
+.hackathon_slide .slides img{
+    width: 12rem;
+}
+.achievers_slide .slick-list,
+.inst_slider .slick-list,
+.hackathon_slide .slick-list {
+ padding-bottom: 5rem;
+}
+.inst_slider .slides img{
+    width: 10rem;
+}
+/****** testimonials ******/
 .testimonial{
     width: 100%;
     background:var(--bg_blue);
@@ -102,8 +122,8 @@
     width: 40%;
     padding: 1.5rem ;
     background: #d5d9ec;
-    border: 0.25px solid #1216299f;
-    box-shadow: 0px 4px 86px rgba(0, 0, 0, 0.15);
+    border: 0.25px solid #12162900;
+    box-shadow: 0px 4px 86px rgba(0, 0, 0, 0.096);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -129,10 +149,13 @@
 .testimonial .test_details .img_box{
     width: 30%;
     padding: 0;
+    border-radius:50% ;
 }
 .testimonial .test_details .img_box img{
   width: 100%;
   object-fit: cover;
+  background:var(--dark_blue);
+  border-radius:50%;
 }
 .testimonial .test_details .content{
     width: 70%;
@@ -277,7 +300,12 @@ footer .copy-write a{
             transform: translate(10px,-15%);
         }
  } 
- @media (max-width: 992px) {
+ @media (max-width: 992px){
+
+    .achievers_slide .slides img,
+    .hackathon_slide .slides img{
+        width: 100%;
+    }
     footer{
         margin-top: 4rem;
     } 
@@ -285,6 +313,7 @@ footer .copy-write a{
         transform: inherit;
         padding: 4rem 0;
     }
+   
  }
  @media (max-width: 768px) {   
     .testimonial .test_box{
@@ -334,6 +363,7 @@ footer .copy-write a{
     .modal-body .sign-in{
         width: 80%;
         justify-content: center;
+        margin-bottom: 12px;
         padding: 0.45rem 0.75rem;
     }
     .modal-footer .btn p{
@@ -350,6 +380,9 @@ footer .copy-write a{
       flex-wrap: wrap;
       justify-content: center ;
     }
+    .testimonial .test_box{
+      margin-bottom: 15px;
+     }
     .testimonial .test_details .content{
         display: flex;
         flex-direction: column;

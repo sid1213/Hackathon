@@ -1,6 +1,7 @@
 :root{
     --theam_blue:#B8C1EC !important;
     --dark_blue:#232946 ;
+    --scrollbar-thumb:#23294670 ;
     --bg_blue:#fafafd !important;
 }
 *{
@@ -9,6 +10,25 @@
     box-sizing: border-box;
     text-align: center;
 }
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:var(--dark_blue);
+}
+
 section{
     overflow-x: hidden;
 }

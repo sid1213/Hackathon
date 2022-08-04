@@ -3,15 +3,20 @@
 
 
 AOS.init();
-
-
-
-
-
-
 $(document).ready(function() {
     console.log( "ready!" );
-   
+    //counter
+    $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
 });
 
 
@@ -119,11 +124,10 @@ $(window).on('load', function() {
     console.log("zccv");
     $('.slider_2').slick('setPosition').slick();
  });
+ 
 // toggle the title 
 let title_chang=2;
 setInterval(() => {
-  
-   
     title_chang++;
     if(title_chang%2==0){
         document.title="1 new message";
@@ -131,5 +135,4 @@ setInterval(() => {
     else
     document.title="Affordable & Competent Courses | iNeuron.ai";
 }, 800);
-
 
