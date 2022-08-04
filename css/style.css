@@ -9,7 +9,9 @@
     box-sizing: border-box;
     text-align: center;
 }
-
+.container-fluid{
+    overflow-x: hidden;
+}
 .bg_slider{
     background: #edf0f4;
 }
