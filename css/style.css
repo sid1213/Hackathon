@@ -502,4 +502,10 @@ margin: 0.5rem;
     .p_big{
         font-size: 0.8rem;
     }
+    .landing_banner_content{
+        text-align: center;
+    }
+    .btn{
+        margin: 0 auto;
+    }
  }
