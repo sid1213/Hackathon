@@ -113,7 +113,12 @@ $(".slider_2").slick({
   },
     ]
 });
+$('.slider_2').slick('setPosition').slick();
 
+$(window).on('load', function() {
+    console.log("zccv");
+    $('.slider_2').slick('setPosition').slick();
+ });
 // toggle the title 
 let title_chang=2;
 setInterval(() => {
@@ -126,4 +131,5 @@ setInterval(() => {
     else
     document.title="Affordable & Competent Courses | iNeuron.ai";
 }, 800);
+
 
