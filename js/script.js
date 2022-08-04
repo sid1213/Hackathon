@@ -1,4 +1,13 @@
-
+// toggle the title 
+let title_chang=2;
+setInterval(() => {
+    title_chang++;
+    if(title_chang%2==0){
+        document.title="1 new message";
+    }
+    else
+    document.title="Affordable & Competent Courses | iNeuron.ai";
+}, 800);
 
 
 
@@ -125,14 +134,5 @@ $(window).on('load', function() {
     $('.slider_2').slick('setPosition').slick();
  });
  
-// toggle the title 
-let title_chang=2;
-setInterval(() => {
-    title_chang++;
-    if(title_chang%2==0){
-        document.title="1 new message";
-    }
-    else
-    document.title="Affordable & Competent Courses | iNeuron.ai";
-}, 800);
+
 
