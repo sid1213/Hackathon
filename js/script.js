@@ -125,5 +125,5 @@ setInterval(() => {
     }
     else
     document.title="Affordable & Competent Courses | iNeuron.ai";
-}, 500);
+}, 800);
 
