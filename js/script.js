@@ -5,25 +5,13 @@
 AOS.init();
 
 
-// toggle the title 
-let title_chang=2;
-setInterval(() => {
-  
-    $('.slider_2').slick('setPosition');
-    $('.slider').slick('setPosition');
-    title_chang++;
-    if(title_chang%2==0){
-        document.title="1 new message";
-    }
-    else
-    document.title="Affordable & Competent Courses | iNeuron.ai";
-}, 500);
 
 
 
-$( document ).ready(function() {
+
+$(document).ready(function() {
     console.log( "ready!" );
- 
+   
 });
 
 
@@ -98,7 +86,7 @@ $(".slider_2").slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-  arrows: false,
+  arrows: true,
   cssEase: "ease-in-out",
 
   responsive: [{
@@ -125,3 +113,17 @@ $(".slider_2").slick({
   },
     ]
 });
+
+// toggle the title 
+let title_chang=2;
+setInterval(() => {
+  
+   
+    title_chang++;
+    if(title_chang%2==0){
+        document.title="1 new message";
+    }
+    else
+    document.title="Affordable & Competent Courses | iNeuron.ai";
+}, 500);
+
