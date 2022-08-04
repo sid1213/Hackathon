@@ -9,8 +9,8 @@
     box-sizing: border-box;
     text-align: center;
 }
-/* section{
-    overflow-x: hidden; */
+section{
+    overflow-x: hidden;
 }
 .bg_slider{
     background: #edf0f4;
