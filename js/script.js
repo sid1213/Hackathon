@@ -8,7 +8,9 @@ AOS.init();
 // toggle the title 
 let title_chang=2;
 setInterval(() => {
-
+  
+    $('.slider_2').slick('setPosition');
+    $('.slider').slick('setPosition');
     title_chang++;
     if(title_chang%2==0){
         document.title="1 new message";
@@ -21,9 +23,7 @@ setInterval(() => {
 
 $( document ).ready(function() {
     console.log( "ready!" );
-   
-    $('.slider_2').slick('setPosition');
-    $('.slider').slick('setPosition');
+ 
 });
 
 
